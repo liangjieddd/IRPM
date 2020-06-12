@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ClassDiagram>
+    <Class name="com.dlj.irpm.dao.NoticeDao" x="795" y="284">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="com.dlj.irpm.dao.EmployeeDao" x="780" y="149">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="com.dlj.irpm.service.impl.HrmServiceImpl" x="314" y="127">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="com.dlj.irpm.dao.NoticeDao"
+            endpointName="noticeDao" kind="Simple"/>
+        <Association destinationClassName="com.dlj.irpm.dao.DeptDao"
+            endpointName="deptDao" kind="Simple"/>
+        <Association destinationClassName="com.dlj.irpm.dao.DocumentDao"
+            endpointName="documentDao" kind="Simple"/>
+        <Association destinationClassName="com.dlj.irpm.dao.UserDao"
+            endpointName="userDao" kind="Simple"/>
+        <Association destinationClassName="com.dlj.irpm.dao.JobDao"
+            endpointName="jobDao" kind="Simple"/>
+        <Association destinationClassName="com.dlj.irpm.dao.EmployeeDao"
+            endpointName="employeeDao" kind="Simple"/>
+        <Communication destinationClassName="com.dlj.irpm.dao.NoticeDao"/>
+        <Communication destinationClassName="com.dlj.irpm.dao.EmployeeDao"/>
+        <Communication destinationClassName="com.dlj.irpm.dao.UserDao"/>
+        <Communication destinationClassName="com.dlj.irpm.dao.DocumentDao"/>
+        <Communication destinationClassName="com.dlj.irpm.dao.JobDao"/>
+        <Communication destinationClassName="com.dlj.irpm.dao.DeptDao"/>
+    </Class>
+    <Class name="com.dlj.irpm.dao.UserDao" x="111" y="149">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="com.dlj.irpm.dao.DocumentDao" x="783" y="426">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="com.dlj.irpm.dao.JobDao" x="104" y="423">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="com.dlj.irpm.dao.DeptDao" x="106" y="278">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+</ClassDiagram>
