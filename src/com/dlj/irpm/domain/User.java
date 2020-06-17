@@ -3,18 +3,14 @@ package com.dlj.irpm.domain;
 import java.io.Serializable;
 import java.util.Date;
 
-/**   
- * @Description: 
- * <br>网站：<a href="http://www.fkit.org">疯狂Java</a> 
- * @author 肖文吉	36750064@qq.com   
- * @version V1.0   
- */
+
 public class User implements Serializable {
 
 	private Integer id;			// id
 	private String username;	// 用户名
 	private String loginname;	// 登录名
 	private String password;	// 密码
+	private String housename;//房间号
 	private Integer status;		// 状态
 	private Date createDate;	// 建档日期
 	// 无参数构造器
@@ -60,11 +56,16 @@ public class User implements Serializable {
 	public void setCreateDate(Date createDate) {
 		this.createDate = createDate;
 	}
+	public String getHousename() {
+		return housename;
+	}
+	public void setHousename(String housename) {
+		this.housename = housename;
+	}
 	@Override
 	public String toString() {
-		return "User [id=" + id + ", username=" + username + ", loginname="
-				+ loginname + ", password=" + password + ", status=" + status
-				+ ", createDate=" + createDate + "]";
+		return "User [id=" + id + ", username=" + username + ", loginname=" + loginname + ", password=" + password
+				+ ", housename=" + housename + ", status=" + status + ", createDate=" + createDate + "]";
 	}
 	
 	

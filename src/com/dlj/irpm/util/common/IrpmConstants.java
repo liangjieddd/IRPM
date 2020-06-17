@@ -4,15 +4,16 @@ public class IrpmConstants {
 	
 	// 数据库表常量
 	public static final String USERTABLE = "user_inf";
-	public static final String HOUSETABLE = "house_inf";
-	public static final String CARTABLE = "car_inf";
-	public static final String WATERFEETABLE = "water_fee";
-	public static final String ELECFEETABLE = "elec_fee";
-	public static final String PROPFEETABLE = "property_fee";
-	public static final String PETFEETABLE = "pet_fee";
-	public static final String COMPLAINTABLE = "complain_info";
-	public static final String REPAIRTABLE = "repair_info";
-	public static final String PETTABLE = "pet_inf";
+	public static final String CARTABLE = "carinfo";
+	public static final String HOUSETABLE = "houseinfo";
+	public static final String USERINFOTABLE = "userinfo";
+	public static final String REPAIRTABLE = "repair";
+	public static final String COMPLAINTABLE = "complain";
+	public static final String WATERTABLE = "waterfee";
+	public static final String PROPTABLE = "propfee";
+	public static final String PETTABLE = "petfee";
+	public static final String ELECTABLE = "elecfee";
+	public static final String PETINFTABLE = "petinf";
 	
 	// 登录
 	public static final String LOGIN = "loginForm";

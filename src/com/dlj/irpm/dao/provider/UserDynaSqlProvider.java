@@ -1,20 +1,15 @@
 package com.dlj.irpm.dao.provider;
 
-import static com.dlj.irpm.util.common.HrmConstants.USERTABLE;
+import static com.dlj.irpm.util.common.IrpmConstants.USERTABLE;
 
 import java.util.Map;
+
 import org.apache.ibatis.jdbc.SQL;
 
 import com.dlj.irpm.domain.User;;
 
-/**   
- * @Description: 用户动态SQL语句提供类
- * <br>网站：<a href="http://www.fkit.org">疯狂Java</a> 
- * @author 肖文吉	36750064@qq.com   
- * @date 2016年7月11日 上午11:19:23 
- * @version V1.0   
- */
 public class UserDynaSqlProvider {
+	
 	// 分页动态查询
 	public String selectWhitParam(Map<String, Object> params){
 		String sql =  new SQL(){
@@ -28,6 +23,9 @@ public class UserDynaSqlProvider {
 					}
 					if(user.getStatus() != null && !user.getStatus().equals("")){
 						WHERE(" status LIKE CONCAT ('%',#{user.status},'%') ");
+					}
+					if(user.getHousename() != null && !user.getHousename().equals("")){
+						WHERE(" housename LIKE CONCAT ('%',#{user.housename},'%') ");
 					}
 				}
 			}
@@ -53,6 +51,9 @@ public class UserDynaSqlProvider {
 					if(user.getStatus() != null && !user.getStatus().equals("")){
 						WHERE(" status LIKE CONCAT ('%',#{user.status},'%') ");
 					}
+					if(user.getHousename() != null && !user.getHousename().equals("")){
+						WHERE(" housename LIKE CONCAT ('%',#{user.housename},'%') ");
+					}
 				}
 			}
 		}.toString();
@@ -76,6 +77,9 @@ public class UserDynaSqlProvider {
 				if(user.getPassword() != null && !user.getPassword().equals("")){
 					VALUES("password", "#{password}");
 				}
+				if(user.getHousename()!= null && !user.getHousename().equals("")){
+					VALUES("housename", "#{housename}");
+				}
 			}
 		}.toString();
 	}
@@ -96,6 +100,9 @@ public class UserDynaSqlProvider {
 					}
 					if(user.getStatus()!= null){
 						SET(" status = #{status} ");
+					}
+					if(user.getHousename()!= null){
+						SET(" housename = #{housename} ");
 					}
 					if(user.getCreateDate()!= null){
 						SET(" create_date = #{createDate} ");

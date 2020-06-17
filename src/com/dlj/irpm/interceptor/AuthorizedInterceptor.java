@@ -6,8 +6,8 @@ import javax.servlet.http.HttpServletResponse;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.dlj.irpm.domain.UserDetail;
-import com.dlj.irpm.util.common.HrmConstants;
+import com.dlj.irpm.domain.User;
+import com.dlj.irpm.util.common.IrpmConstants;
 
 /** 
  * 判断用户权限的Spring MVC的拦截器
@@ -60,12 +60,12 @@ public class AuthorizedInterceptor  implements HandlerInterceptor {
         /** 拦截请求 */
         if (!flag){
         	/** 1.获取session中的用户  */
-        	UserDetail user = (UserDetail) request.getSession().getAttribute(HrmConstants.USER_SESSION);
+        	User user = (User) request.getSession().getAttribute(IrpmConstants.USER_SESSION);
         	/** 2.判断用户是否已经登录 */
         	if(user == null){
         		 /** 如果用户没有登录，跳转到登录页面 */
         		request.setAttribute("message", "请先登录再访问网站!");
-        		request.getRequestDispatcher(HrmConstants.LOGIN).forward(request, response);
+        		request.getRequestDispatcher(IrpmConstants.LOGIN).forward(request, response);
         		return flag;
         	}else{
         		 flag = true;

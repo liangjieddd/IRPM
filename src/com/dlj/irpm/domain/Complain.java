@@ -1,34 +1,15 @@
 package com.dlj.irpm.domain;
 
-import java.util.Date;
-
-public class Complain implements java.io.Serializable {
-
-	private Integer id; // 编号
-	private UserDetail user; // 投诉人
-	private String title;// 标题
-	private String detail; // 内容
-	private java.util.Date createDate; // 发布日期
-	private String replay;// 投诉反馈
+public class Complain {
+	private Integer id;		// 编号
+	private String title;   // 标题
+	private String content; // 内容
+	private java.util.Date createDate;  // 发布日期
+	private String replay;//投诉反馈
+	private User user;		// 发布人
+	// 无参数构造器
 	public Complain() {
 		super();
-	}
-	public Complain(UserDetail user, String title, String detail, Date createDate, String replay) {
-		super();
-		this.user = user;
-		this.title = title;
-		this.detail = detail;
-		this.createDate = createDate;
-		this.replay = replay;
-	}
-	public Complain(Integer id, UserDetail user, String title, String detail, Date createDate, String replay) {
-		super();
-		this.id = id;
-		this.user = user;
-		this.title = title;
-		this.detail = detail;
-		this.createDate = createDate;
-		this.replay = replay;
 	}
 	public Integer getId() {
 		return id;
@@ -36,23 +17,17 @@ public class Complain implements java.io.Serializable {
 	public void setId(Integer id) {
 		this.id = id;
 	}
-	public UserDetail getUser() {
-		return user;
-	}
-	public void setUser(UserDetail user) {
-		this.user = user;
-	}
 	public String getTitle() {
 		return title;
 	}
 	public void setTitle(String title) {
 		this.title = title;
 	}
-	public String getDetail() {
-		return detail;
+	public String getContent() {
+		return content;
 	}
-	public void setDetail(String detail) {
-		this.detail = detail;
+	public void setContent(String content) {
+		this.content = content;
 	}
 	public java.util.Date getCreateDate() {
 		return createDate;
@@ -66,12 +41,16 @@ public class Complain implements java.io.Serializable {
 	public void setReplay(String replay) {
 		this.replay = replay;
 	}
+	public User getUser() {
+		return user;
+	}
+	public void setUser(User user) {
+		this.user = user;
+	}
 	@Override
 	public String toString() {
-		return "Complain [id=" + id + ", user=" + user + ", title=" + title + ", detail=" + detail + ", createDate="
-				+ createDate + ", replay=" + replay + "]";
+		return "Complain [id=" + id + ", title=" + title + ", content=" + content + ", createDate=" + createDate
+				+ ", replay=" + replay + ", user=" + user + "]";
 	}
-	
-	
 
 }

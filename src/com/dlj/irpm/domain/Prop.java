@@ -1,14 +1,15 @@
 package com.dlj.irpm.domain;
 
-public class Pet implements java.io.Serializable {
+public class Prop implements java.io.Serializable {
 
 	private Integer id; // 编号
+	private float price; // 单价
 	private float value;// 总价
 	private String mon;// 月份
 	private String status;// 缴纳状态
 	private java.util.Date createDate; // 发布日期
 	private House house; // 使用房屋
-	public Pet() {
+	public Prop() {
 		super();
 	}
 	public Integer getId() {
@@ -16,6 +17,12 @@ public class Pet implements java.io.Serializable {
 	}
 	public void setId(Integer id) {
 		this.id = id;
+	}
+	public float getPrice() {
+		return price;
+	}
+	public void setPrice(float price) {
+		this.price = price;
 	}
 	public float getValue() {
 		return value;
@@ -49,8 +56,8 @@ public class Pet implements java.io.Serializable {
 	}
 	@Override
 	public String toString() {
-		return "Pet [id=" + id + ", value=" + value + ", mon=" + mon + ", status=" + status + ", createDate="
-				+ createDate + ", house=" + house + "]";
+		return "Prop [id=" + id + ", price=" + price + ", value=" + value + ", mon=" + mon + ", status=" + status
+				+ ", createDate=" + createDate + ", house=" + house + "]";
 	}
 	
 	
